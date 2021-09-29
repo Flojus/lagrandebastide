@@ -1,0 +1,195 @@
+---
+template: page
+heading: Très bel appartement T4 en rez-de-jardin
+title: Appartement T4 rez-de-jardin - La Grande Bastide - Le Lavandou
+description: Louez votre appartement T4 en rez-de-jardin proche de la plage du Lavandou
+services:
+  - row:
+    - service1:
+      title: Cuisine équipée
+      icon: utensils
+      text: Plaque induction 4 feux, four pyrolyse, micro-onde, réfrigérateur-congélateur
+    - service2:
+      title: Multimédia
+      icon: wifi
+      text: WiFi, TV écran plat LCD, lecteur DVD, lecteur CD
+    - service3:
+      title: Petit déjeuner
+      icon: coffee
+      text: Cafetière, bouilloire, grille-pain
+  - row:
+    - service4:
+      title: Climatisation
+      icon: temperature-low
+      text: Climatisation réversible
+    - service5:
+      title: Lavage
+      icon: hand-sparkles
+      text: Lave-vaisselle, lave-linge
+    - service6:
+      title: Entretien et soin de la maison
+      icon: broom
+      text: Fer à repasser, table à repasser, aspirateur
+  - row:
+    - service7:
+      title: Vélos
+      icon: bicycle
+      text: VTT à disposition
+    - service8:
+      title: Jardin et plein air
+      icon: sun
+      text: Terrasse indépendante avec meubles de jardin, bains de soleil, barbecue
+    - service9:
+      title: Parking
+      icon: parking
+      text: 3 places
+---
+<div class="content">
+  <div class="container p-4">
+    <div class="row gx-5">
+      <div class="col text-center">
+        <p class="px-3 fw-bolder">90m²</p>
+        <p class="pbx-3 fw-light">Jardin</p>
+      </div>
+      <div class="col text-center">
+        <p class="px-3 fw-bolder">85m²</p>
+        <p class="pbx-3 fw-light">Surface</p>
+      </div>
+      <div class="col text-center">
+        <p class="px-3 fw-bolder">8-10 personnes</p>
+        <p class="pbx-3 fw-light">Capacité</p>
+      </div>
+      <div class="col text-center">
+        <p class="px-3 fw-bolder">3</p>
+        <p class="pbx-3 fw-light">Chambres</p>
+      </div>
+      <div class="col text-center">
+        <p class="px-3 fw-bolder">1</p>
+        <p class="pbx-3 fw-light">Chambre mezzanine</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bastide-spacer my-5"></div>
+
+  <div
+      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+      class="swiper apptSwiper"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            data-src="{{ site.baseurl }}/assets/images/La-Grande-Bastide-Location-appartements-Le-Lavandou-terrasse.jpg"
+            class="swiper-lazy"
+          />
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide">
+          <img
+            data-src="{{ site.baseurl }}/assets/images/La-Grande-Bastide-Location-appartements-Le-Lavandou-cuisine.jpg"
+            class="swiper-lazy"
+          />
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide">
+          <img
+            data-src="{{ site.baseurl }}/assets/images/La-Grande-Bastide-Location-appartements-Le-Lavandou-salon.jpg"
+            class="swiper-lazy"
+          />
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="bastide-spacer my-5"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>Description</h3>
+          <p class="fs-6">
+            Appartement T4 situé en rez-de-jardin comportant une grande cuisine toute équipée, ouverte sur la salle à manger. Le salon est surplombé par une mezzanine, vous offrant un couchage d’appoint (140 x 200) ainsi qu’un coin jeux pour les enfants.
+            <br/><br/>
+            Au niveau chambres à coucher, il y a 3 chambres équipées de lit double et panderie. Toutes les chambres sont climatisées individuellement.
+            <br/><br/>
+            Dans le salon, un clic-clac vous permet d’avoir un double couchage supplémentaire.
+            <br/><br/>
+            La salle d’eaux comporte une grande douche, un meuble lavabo classique avec miroir, un meuble de rangement et un sèche-serviettes.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Jardin privatif</h3>
+          <p class="fs-6">
+            Pour accompagner l’appartement T4, un jardin de 90 m² indépendant exposé au Sud, fermé par un portail et bordé par une haie de cannes à sucres. Présence d’un cerisier et d’un citronnier quatre saisons. Aménagé avec un abri vélos, une table d’extérieur, des chaises longues et un barbecue.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bastide-spacer my-5"></div>
+
+  <!-- Icon Blocks -->
+  <div class="container content-space-2 content-space-lg-3 p-4">
+    <div class="row justify-content-lg-center">
+
+      {% for row in page.services %}
+      {% for service in row.row %}
+      {% if service.last %}
+      <div class="col-md-4 col-lg-4">
+        {% else %}
+        <div class="col-md-4 col-lg-4 mb-3 mb-md-5 mb-lg-7">
+          {% endif %}
+          <!-- Icon Blocks -->
+          <div class="d-flex pe-md-5  align-items-center">
+            <div class="flex-shrink-0">
+              <div class="fas fa-{{ service.icon }}" style="font-size: 40px; color: #1a5b9c;"></div>
+            </div>
+
+            <div class="flex-grow-1 ms-3">
+              <h4 class="text-uppercase fs-5 text">{{ service.title }}</h4>
+              <p class="fs-6 text">{{ service.text }}</p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+        {% endfor %}
+        {% if service.last %}
+        {% continue %}
+        {% endif %}
+        <div class="w-100"></div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- End Icon Blocks -->
+  </div>
+
+  <div class="bastide-spacer my-5"></div>
+
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button onclick="window.location.href='{{ site.baseurl }}/contact/'" type="button" class="btn btn-primary btn-lg" style="background-color: #1a5b9c;">Réserver</button>
+    <button onclick="window.location.href='{{ site.baseurl }}/tarifs/'" type="button" class="btn btn-primary btn-lg" style="background-color: #1a5b9c;">Tarifs</button>
+  </div>
+
+
+</div>
+
+<script>
+  function initSlider() {
+		const swiper = new Swiper('.apptSwiper', {
+      lazy: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+		});
+	}
+</script>
+<script async defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js" onload="initSlider();"></script>

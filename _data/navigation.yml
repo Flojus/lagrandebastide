@@ -1,0 +1,20 @@
+- name: Accueil
+  link: /
+  new_window: false
+  highlight: false
+- name: Tarifs
+  link: /tarifs/
+  new_window: false
+  highlight: false
+- name: T4 Rez-de-jardin
+  link: /t4-rez-de-jardin/
+  new_window: false
+  highlight: false
+- name: Loisirs à volonté
+  link: /loisirs/
+  new_window: false
+  highlight: false
+- name: Contact
+  link: /contact/
+  new_window: false
+  highlight: true

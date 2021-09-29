@@ -1,0 +1,59 @@
+# ----
+# Site
+
+title: La Grande Bastide - Le Lavandou
+url: "https://flojus.github.io/lagrandebastide/"
+baseurl:
+google_analytics_key:
+google_maps_javascript_api_key: AIzaSyC1y2cdTMHyZaWauL4qSen4vierk1hzukQ
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /siteicon.png
+tagline: Locations de vacances à Le Lavandou - La Grande Bastide
+description: Louez des appartements en rez-de-jardins tout équipés au Lavandou - La Grande Bastide
+locale: fr_FR
+author:
+  name: La Grande Bastide
+
+# -----
+# Build
+
+timezone: Europe/Paris
+
+paginate: 10
+paginate_path: "/blog/:num/"
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      _options:
+        content:
+          width: 1500
+          height: 2500
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+  - scope:
+      path: "index.html"
+    values:
+      layout: "default"
+  - scope:
+      path: "contact.html"
+    values:
+      full_width: true
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE

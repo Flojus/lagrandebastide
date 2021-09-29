@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{% seo %}
+
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/screen.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
+	<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
+	<script>
+		window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+		ga('create', '{{ site.google_analytics_key }}', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	{% endif %}
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.webp"
+						alt="La Grande Bastide - Le Lavandou Logo" width="190" height="88" /></a></div>
+			{% include navigation.html %}
+		</div>
+	</header>
+	{{ content }}
+	<footer>
+		<div class="container">
+			<div class="footer-columns">
+				{% for column in site.data.footer %}
+				<ul class="footer-links">
+					{% for link in column.links %}
+					<li><a {% if link.new_window %}target="_blank" rel="noopener" {% endif %}
+							href="{% include relative-src.html src=link.link %}">
+							{{ link.name }}</a></li>
+					{% endfor %}
+				</ul>
+				{% endfor %}
+				<div id=contact-footer>
+					<ul class="footer-links">
+					<li><i class="fas fa-home"></i> 21 rue Saint-Pons, 83980 Le Lavandou</li>
+					<li><i class="fas fa-phone"></i> +33 7 86 21 19 97</li>
+				</ul>
+				</div>
+
+			</div>
+			<p class="copyright">&copy; {{ site.time | date: '%Y' }} La Grande Bastide • Template inspired by CloudCannon</p>
+		</div>
+	</footer>
+	<script>
+		document.getElementById("open-nav").onclick = function () {
+			document.body.classList.toggle("nav-open");
+			return false;
+		};
+	</script>
+</body>
+
+</html>

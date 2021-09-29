@@ -1,0 +1,172 @@
+---
+title: La Grande Bastide - Locations de vacances au Lavandou
+description: Locations d'appartements en rez-de-jardin à Le Lavandou, près de la plage
+services:
+  - row:
+    - service1:
+      title: Cuisine équipée
+      icon: utensils
+      text: Préparez des repas entre amis ou en famille.
+    - service2:
+      title: Multimédia
+      icon: wifi
+      text: Accédez gratuitement au WiFi et bien plus encore.
+    - service3:
+      title: We speak English
+      icon: language
+      text: Poeple from all other the world are welcome.
+  - row:
+    - service4:
+      title: Cuisine équipée
+      icon: utensils
+      text: Préparez des repas entre amis ou en famille.
+    - service5:
+      title: Multimédia
+      icon: wifi
+      text: Accédez gratuitement au WiFi et bien plus encore.
+    - service6:
+      title: We speak English
+      icon: language
+      text: Poeple from all other the world are welcome.
+leLavandou:
+  - point: 
+    name: Plages
+    description: De nombreuses plages et criques sont accessibles à pieds, à vélo ou à voiture avec des parkings à proximité.
+    icon: umbrella-beach
+  - point: 
+    name: Port
+    description: L’équipe de la Capitainerie est à votre entière disposition pour votre escale lavandouraine.
+    icon: anchor
+  - point: 
+    name: Transport
+    description: Il est facile d’accéder au Lavandou, en voiture, ou en taxi, autocar, location de voiture depuis la gare de Toulon. TGV direct depuis / vers Paris.
+    icon: plane
+  - point: 
+    name: Office de tourisme
+    description: L’Office de Tourisme du Lavandou est ouvert toute l’année. Parking sur le port. De mi-juin à mi-septembre ouvert tous les jours.
+    icon: question-circle
+  - point: 
+    name: Activités
+    description: De nombreuses activités sont proposées toute l’année.
+    icon: table-tennis
+---
+<section class="hero">
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img
+					src="{{ site.baseurl }}/assets/images/La-Grande-Bastide-Location-appartements-Le-Lavandou-terrasse.jpg"
+					alt="La Grande Bastide - Terrasse">
+			</div>
+			<div class="swiper-slide"><img
+					src="{{ site.baseurl }}/assets/images/La-Grande-Bastide-Location-appartements-Le-Lavandou-cuisine.jpg"
+					alt="La Grande Bastide - Cuisine"></div>
+			<div class="swiper-slide"><img
+					src="{{ site.baseurl }}/assets/images/La-Grande-Bastide-Location-appartements-Le-Lavandou-salon.jpg"
+					alt="La Grande Bastide - Salon"></div>
+		</div>
+	</div>
+</section>
+
+<div class="content">
+	<section>
+		<div class="container">
+            <div class="text" style="text-align: center;">
+				<h2>Nos services</h2>
+			</div>
+            {% for row in page.services %}
+			<div class="my_table_container">
+					{% for service in row.row %}
+						<div class="my_column_container">
+							<article class="my_article">
+								<div class="my_content">
+									<header class="my_header">
+										<div class="fas fa-{{ service.icon }} iconbox" aria-hidden="true"></div>
+										<h3 class="my_h3" itemprop="headline">{{ service.title }}</h3>
+									</header>
+									<div class="content_wrapper" itemprop="text">
+										<p>{{ service.text }}</p>
+									</div>
+								</div>
+							</article>
+						</div>
+						{% if service.last %}
+							{% continue %}
+						{% endif %}
+						<div class="flex-placeholder"></div>
+					{% endfor %}
+			</div>
+            {% endfor %}
+		</div>
+	</section>
+
+	<section class="odd">
+		<div class="container flex">
+			<div class="text">
+				<h2>Location T4 rez-de-jardin au Lavandou</h2>
+			</div>
+			<div class="image">
+				<a href="{{ site.baseurl }}/t4-rez-de-jardin/">
+					<img src="{{ site.baseurl }}/assets/images/T4-rez-de-jardin-la-grande-bastide.jpg"
+					alt="T4 rez-de-jardin - Le Lavandou" />
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container flex">
+			<div class="text">
+				<h2>Le Lavandou</h2>
+				<div class="list-group">
+					{% for point in page.leLavandou %}
+					<div class="list-group-item list-group-item-action">
+					  <div class="d-flex w-100 justify-content-between">
+						<h5 class="mb-1">{{ point.name }}</h5>
+						<i class="fas fa-{{ point.icon }}"></i>
+					  </div>
+					  <p class="mb-1">{{ point.description }}</p>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="image">
+				<img src="{{ site.baseurl }}/assets/images/Le-Lavandou-Grande-Plage-Crédit-Mairie-de-Le-Lavandou.jpg"
+					alt="Le Lavandou - Grande Plage" />
+			</div>
+		</div>
+	</section>
+
+	<section class="testimonial">
+		<div class="container flex">
+			<div class="testimonial-block">
+				<div class="square-image"><img
+						src="{{ site.baseurl }}/assets/images/testimonials-location-au-lavandou.jpg" alt="Sufer - Le Lavandou"></div>
+				<blockquote>
+					<p>Nous avons passé d’excellents moments entre amis dans notre location au
+						Lavandou, notamment dans le jardin autour du barbecue ! L’appartement est très grand, propre et
+						bien équipé.</p>
+					<p class="editable author">Thomas</p>
+				</blockquote>
+			</div>
+		</div>
+	</section>
+
+	<section class="bottom-cta">
+		<h2 class="editable">Vous avez une question ou un besoin particulier ?</h2>
+		<div class="button alt"><a href="{{ site.baseurl }}/contact/">Contactez-nous</a></div>
+	</section>
+</div>
+<script>
+	function initSlider() {
+		const swiper = new Swiper('.swiper', {
+			// Optional parameters
+			direction: 'horizontal',
+			loop: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+		});
+	}
+</script>
+<script async defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js" onload="initSlider();"></script>
