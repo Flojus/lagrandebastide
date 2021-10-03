@@ -4,7 +4,6 @@
 title: La Grande Bastide - Le Lavandou
 url: "https://location-au-lavandou.com/"
 baseurl:
-google_analytics_key:
 google_maps_javascript_api_key: AIzaSyC1y2cdTMHyZaWauL4qSen4vierk1hzukQ
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
