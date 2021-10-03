@@ -17,7 +17,6 @@ services:
       title: Petit déjeuner
       icon: coffee
       text: Cafetière, bouilloire, grille-pain
-  - row:
     - service4:
       title: Climatisation
       icon: temperature-low
@@ -30,7 +29,6 @@ services:
       title: Entretien et soin de la maison
       icon: broom
       text: Fer à repasser, table à repasser, aspirateur
-  - row:
     - service7:
       title: Vélos
       icon: bicycle
@@ -137,30 +135,30 @@ services:
     <div class="row justify-content-lg-center">
 
       {% for row in page.services %}
-      {% for service in row.row %}
-      {% if service.last %}
-      <div class="col-md-4 col-lg-4">
-        {% else %}
-        <div class="col-md-4 col-lg-4 mb-3 mb-md-5 mb-lg-7">
+        {% for service in row.row %}
+          {% if service.last %}
+            <div class="col-md-6 col-lg-4">
+          {% else %}
+            <div class="col-md-6 col-lg-4 mb-3 mb-md-5 mb-lg-7">
           {% endif %}
-          <!-- Icon Blocks -->
-          <div class="d-flex pe-md-5  align-items-center">
-            <div class="flex-shrink-0">
-              <div class="fas fa-{{ service.icon }}" style="font-size: 40px; color: #1a5b9c;"></div>
-            </div>
+              <!-- Icon Blocks -->
+              <div class="d-flex pe-md-5  align-items-center">
+                <div class="flex-shrink-0">
+                  <div class="fas fa-{{ service.icon }}" style="font-size: 40px; color: #1a5b9c;"></div>
+                </div>
 
-            <div class="flex-grow-1 ms-3">
-              <h4 class="text-uppercase fs-5 text">{{ service.title }}</h4>
-              <p class="fs-6 text text-reset">{{ service.text }}</p>
+                <div class="flex-grow-1 ms-3">
+                  <h4 class="text-uppercase fs-5 text">{{ service.title }}</h4>
+                  <p class="fs-6 text text-reset">{{ service.text }}</p>
+                </div>
+              </div>
+              <!-- End Icon Blocks -->
             </div>
-          </div>
-          <!-- End Icon Blocks -->
-        </div>
-        {% endfor %}
-        {% if service.last %}
-        {% continue %}
-        {% endif %}
-        <div class="w-100"></div>
+            {% endfor %}
+          {% if service.last %}
+            {% continue %}
+          {% endif %}
+          <div class="w-100"></div>
         {% endfor %}
       </div>
     </div>
