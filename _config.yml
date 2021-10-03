@@ -37,6 +37,9 @@ defaults:
     values:
       full_width: true
 
+sass:
+  style: compressed
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
