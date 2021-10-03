@@ -3,6 +3,68 @@ template: page
 heading: Très bel appartement T4 en rez-de-jardin
 title: Appartement T4 rez-de-jardin - La Grande Bastide - Le Lavandou
 description: Louez votre appartement T4 en rez-de-jardin proche de la plage du Lavandou
+images:
+  - image1:
+    url: Entrée - La Grande Bastide - Le Lavandou.webp
+    alt: La Grande Bastide - Entrée
+  - image10:
+    url: La-Grande-Bastide-Location-appartements-Le-Lavandou-terrasse.webp
+    alt: Terrasse
+  - image8:
+    url: Cuisine - La Grande Bastide - Le Lavandou.webp
+    alt: Cuisine
+  - image12:
+    url: Salle à manger - 2  - La Grande Bastide - Le Lavandou.webp
+    alt: Salle à manger - bis
+  - image13:
+    url: Salle à manger - La Grande Bastide - Le Lavandou.webp
+    alt: Salle à manger
+  - image15:
+    url: Salon  - La Grande Bastide - Le Lavandou.webp
+    alt: Salon
+  - image16:
+    url: Salon équipé - La Grande Bastide - Le Lavandou.webp
+    alt: Salon équipé
+  - image17:
+    url: Salon et mezzanine - La Grande Bastide - Le Lavandou.webp
+    alt: Salon et mezzanine
+  - image18:
+    url: Salon et salle à manger - La Grande Bastide - Le Lavandou.webp
+    alt: Salon et salle à manger
+  - image19:
+    url: Table salle à manger  - La Grande Bastide - Le Lavandou.webp
+    alt: Table salle à manger
+  - image2:
+    url: Chambre 1 - La Grande Bastide - Le Lavandou.webp
+    alt: La Grande Bastide - Chambre 1
+  - image3:
+    url: Chambre 1 - bis - La Grande Bastide - Le Lavandou.webp
+    alt: La Grande Bastide - Chambre 1 Fenêtre
+  - image4:
+    url: Chambre 2 - La Grande Bastide - Le Lavandou.webp
+    alt: Chambre 2
+  - image5:
+    url: Chambre 2 - rangements - La Grande Bastide - Le Lavandou.webp
+    alt: Chambre 2 - Rangements
+  - image6:
+    url: Chambre 3 - clim - La Grande Bastide - Le Lavandou.webp
+    alt: Chambre 3 - Clim
+  - image7:
+    url: Chambre 3 - La Grande Bastide - Le Lavandou.webp
+    alt: Chambre 3
+  - image9:
+    url: Grande douche à l'italienne - La Grande Bastide - Le Lavandou.webp
+    alt: Douche à l'italienne
+  - image11:
+    url: Mezzanine - La Grande Bastide - Le Lavandou.webp
+    alt: Mezzanine
+  - image14:
+    url: Salle de bain  - La Grande Bastide - Le Lavandou.webp
+    alt: Salle de bain
+  - image19:
+    url: Toilettes séparés - La Grande Bastide - Le Lavandou.webp
+    alt: Toilettes séparés
+    
 services:
   - row:
     - service1:
@@ -75,28 +137,16 @@ services:
       class="swiper apptSwiper"
     >
       <div class="swiper-wrapper">
+        {% for image in page.images %}
         <div class="swiper-slide">
           <img
-            data-src="{{ site.baseurl }}/assets/images/Entrée - La Grande Bastide - Le Lavandou.webp"
-            class="swiper-lazy"
+          data-src="{{ site.baseurl }}/assets/images/{{ image.url }}"
+          alt="{{ image.alt }}"
+          class="swiper-lazy"
           />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <img
-            data-src="{{ site.baseurl }}/assets/images/Chambre 1 - La Grande Bastide - Le Lavandou.webp"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <div class="swiper-slide">
-          <img
-            data-src="{{ site.baseurl }}/assets/images/Chambre 1 - bis - La Grande Bastide - Le Lavandou.webp"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+        {% endfor %}
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
