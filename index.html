@@ -53,13 +53,19 @@ leLavandou:
 <section class="hero">
 	<div class="swiper">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide"><img
-					src="{{ site.baseurl }}/assets/images/La Grande Bastide - Location d'appartements au Lavandou.webp"
-					alt="La Grande Bastide - Entrée">
+			<div class="swiper-slide">
+			<img
+			data-src="{{ site.baseurl }}/assets/images/La Grande Bastide - Location d'appartements au Lavandou.webp"
+			alt="La Grande Bastide - Entrée"
+			class="swiper-lazy"
+			/>
 			</div>
-			<div class="swiper-slide"><img
-				src="{{ site.baseurl }}/assets/images/La-Grande-Bastide-Location-appartements-Le-Lavandou-terrasse.webp"
-				alt="La Grande Bastide - Terrasse">
+			<div class="swiper-slide">
+			<img
+			data-src="{{ site.baseurl }}/assets/images/La-Grande-Bastide-Location-appartements-Le-Lavandou-terrasse.webp"
+			alt="La Grande Bastide - Terrasse"
+			class="swiper-lazy"
+			/>
 			</div>
 		</div>
 	</div>
@@ -106,6 +112,7 @@ leLavandou:
 				<a href="{{ site.baseurl }}/t4-rez-de-jardin/">
 					<img src="{{ site.baseurl }}/assets/images/Entrée - La Grande Bastide - Le Lavandou.webp"
 					width="608"
+					loading=lazy
 					alt="T4 rez-de-jardin - Le Lavandou" />
 				</a>
 			</div>
@@ -131,6 +138,7 @@ leLavandou:
 			<div class="image">
 				<img src="{{ site.baseurl }}/assets/images/Le-Lavandou-Grande-Plage-Crédit-Mairie-de-Le-Lavandou.webp"
 					width="608"
+					loading=lazy
 					alt="Le Lavandou - Grande Plage" />
 			</div>
 		</div>
@@ -159,11 +167,12 @@ leLavandou:
 <script>
 	function initSlider() {
 		const swiper = new Swiper('.swiper', {
+			lazy: true,
 			// Optional parameters
 			direction: 'horizontal',
 			loop: true,
 			autoplay: {
-				delay: 2500,
+				delay: 3500,
 				disableOnInteraction: false,
 			},
 		});
